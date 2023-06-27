@@ -1,0 +1,65 @@
+@charset "uft-8";
+
+@import url(https://cdn.jsdelivr.net/npm/fullpage.js@2.9.4/dist/jquery.fullpage.min.js);
+
+@font-face {
+    font-family: 'Osbourne Pro', serif;
+    src: url(../font/Osbourne-Pro/OsbournePro-Light.otf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Osbourne Pro', serif;
+    src: url(../font/Roboto-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Osbourne Pro', serif;
+    src: url(../font/Osbourne-Pro/OsbournePro-Medium.otf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Osbourne Pro', serif;
+    src: url(../font/Osbourne-Pro/OsbournePro-Bold.otf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'SpoqaHanSansNeo_OTF_subset';
+    src: url(../font/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Thin.woff);
+    src: url(../font/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Light.eot);
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'SpoqaHanSansNeo_OTF_subset';
+    src: url(../font/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Regular.eot);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'SpoqaHanSansNeo_OTF_subset';
+    src: url(../font/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Medium.eot);
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'SpoqaHanSansNeo_OTF_subset';
+    src: url(../font/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo_OTF_subset/SpoqaHanSansNeo-Bold.eot);
+    font-weight: 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+ol,ul,li{
+    list-style: none;
+}
+img,svg{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
