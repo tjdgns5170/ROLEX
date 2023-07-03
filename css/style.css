@@ -6,9 +6,9 @@
 #hamburger{
     display: none;
 }
-#wrap{
+/* #wrap{
     overflow: hidden;
-}
+} */
 .container{
     height: 100vh;
 }
@@ -382,7 +382,7 @@
 } */
 .sec-4{
     position:relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     display:flex;
     background: url(../img/sec-4-scroll.jpg) no-repeat center;
     background-size: cover;
