@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  AOS.init(); 
+
   $('.user').click(function(){
     $('.black-login').fadeIn();
   });
@@ -21,19 +23,19 @@ $(document).ready(function(){
     const sec3_sct = $('.sec-3').offset().top;
     const sec4_sct = $('.sec-4').offset().top;
 
-    console.log(sct);
-    if (sct >= sec4_sct && ww > 1600){
-      skrollr.init();
-      $('.horizontal-container').css({
-          position: 'fixed',
-          top: 0,
-          left: 0,
-      });
-    }else{
-      $('.horizontal-container').css({
-        position: 'static'
-      });
-    }
+    // console.log(sct);
+    // if (sct >= sec4_sct && ww > 1600){
+    //   skrollr.init();
+    //   $('.horizontal-container').css({
+    //       position: 'fixed',
+    //       top: 0,
+    //       left: 0,
+    //   });
+    // }else{
+    //   $('.horizontal-container').css({
+    //     position: 'static'
+    //   });
+    // }
 
     if(sct >= sec4_sct){
         $('.header-area').addClass('active');
@@ -51,6 +53,53 @@ $(document).ready(function(){
       $('.sub-txt2').removeClass('active');
   }
   });
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  let sections = gsap.utils.toArray(".sec");
+
+  let scrollTween = gsap.to(sections, {
+      xPercent: -100 * (sections.length - 1),
+      ease: "none",
+      scrollTrigger: {
+      trigger: ".horizontal-container",
+      pin: true,
+      scrub: 0.1,
+      end: "+=3000"
+      }
+  });
+
+  gsap.set(".box-1, .box-2", {y: 100});
+  // 스크롤마킹
+  // ScrollTrigger.defaults({markers: {startColor: "white", endColor: "white"}});
+
+  gsap.to(".box-1", {
+  y: -130,
+  duration: 2,
+  ease: "elastic",
+  scrollTrigger: {
+      trigger: ".box-1",
+      containerAnimation: scrollTween,
+      start: "left center",
+      toggleActions: "play none none reset",
+      id: "1",
+  }
+  });
+
+
+  gsap.to(".box-2", {
+  y: -120,
+  ease: "none",
+  scrollTrigger: {
+      trigger: ".box-2",
+      containerAnimation: scrollTween,
+      start: "center 80%",
+      end: "center 20%",
+      scrub: true,
+      id: "2"
+  }
+  });
+
 
   media();
   function media(){
