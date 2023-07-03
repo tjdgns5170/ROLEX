@@ -21,7 +21,7 @@ $(document).ready(function(){
     const sec1_sct = $('.sec-1').offset().top;
     const sec2_sct = $('.sec-2').offset().top;
     const sec3_sct = $('.sec-3').offset().top;
-    const sec4_sct = $('.sec-4').offset().top;
+    const sec4_sct = $('.horizontal-container').offset().top;
 
     // console.log(sct);
     // if (sct >= sec4_sct && ww > 1600){
